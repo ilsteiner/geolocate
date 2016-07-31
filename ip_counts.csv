@@ -1,23 +1,46 @@
-Country Name,State Code,State Name,Latitude,Longitude,Address,IP Count
-United States,,,51,37.751,,-97.822
-United States,DE,Delaware,1,39.6734,,-75.7052
-United States,FL,Florida,4,25.8338,,-80.3017
-Singapore,01,Central Singapore Community Development Council,1,1.2931,,103.8558
-United States,TX,Texas,8,29.4889,,-98.3987
-United States,LA,Louisiana,3,30.5826,,-90.1069
-United States,NY,New York,3,41.3246,,-73.6976
-United States,NV,Nevada,1,39.3855,,-119.6753
-United States,VA,Virginia,4,36.6648,,-78.3715
-United States,CA,California,4,37.8313,,-122.2853
-United States,AL,Alabama,2,33.5387,,-86.8035
-United States,GA,Georgia,2,34.0408,,-84.1665
-United States,IN,Indiana,2,41.3969,,-87.3274
-Australia,VIC,Victoria,1,-37.8139,,144.9634
-Japan,13,Tokyo,1,35.6845,,139.7559
-United States,MA,Massachusetts,1,42.3646,,-71.1028
-United States,OH,Ohio,1,40.1768,,-83.0792
-United States,UT,Utah,1,41.6065,,-111.7241
-United States,MO,Missouri,2,38.6554,,-90.4539
-United States,MS,Mississippi,3,32.2161,,-89.8899
-United States,SC,South Carolina,3,34.9011,,-82.2662
-United States,KY,Kentucky,1,36.8596,,-88.3367
+city_name,country_name,state_code,state_name,count
+San Juan,Puerto Rico,San Juan,San Juan,1
+Colfax,United States,LA,Louisiana,1
+Somers,United States,NY,New York,1
+Crown Point,United States,IN,Indiana,2
+Midland,United States,TX,Texas,1
+Marlow,United States,OK,Oklahoma,1
+Athens,United States,GA,Georgia,1
+Brandon,United States,MS,Mississippi,1
+Newark,United States,DE,Delaware,1
+Covington,United States,LA,Louisiana,1
+St Louis,United States,MO,Missouri,1
+Ninnescah,United States,KS,Kansas,50
+Fort Lauderdale,United States,FL,Florida,1
+Boydton,United States,VA,Virginia,3
+Dodgewood,United States,NY,New York,1
+Port Lavaca,United States,TX,Texas,1
+Singapore,Singapore,01,Central Singapore Community Development Council,1
+Bowie,United States,MD,Maryland,1
+Cypress,United States,TX,Texas,1
+San Diego,United States,CA,California,1
+Powell,United States,OH,Ohio,1
+Ashburn,United States,VA,Virginia,1
+Miami,United States,FL,Florida,3
+New Orleans,United States,LA,Louisiana,1
+Los Angeles,United States,CA,California,1
+Hyrum,United States,UT,Utah,1
+San Antonio,United States,TX,Texas,5
+Kosciusko,United States,MS,Mississippi,1
+Emeryville,United States,CA,California,1
+Tokyo,Japan,13,Tokyo,1
+Greer,United States,SC,South Carolina,3
+Benton,United States,KY,Kentucky,1
+Melbourne,Australia,VIC,Victoria,1
+Duluth,United States,GA,Georgia,1
+Warrensburg,United States,MO,Missouri,1
+New York,United States,NY,New York,1
+Fountain Valley,United States,CA,California,1
+Houston,United States,TX,Texas,1
+Cambridge,United States,MA,Massachusetts,1
+Texarkana,United States,TX,Texas,1
+Las Vegas,United States,NV,Nevada,3
+Reno,United States,NV,Nevada,1
+Walden,United States,NY,New York,1
+Birmingham,United States,AL,Alabama,2
+Morton,United States,MS,Mississippi,1
