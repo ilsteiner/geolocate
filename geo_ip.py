@@ -2,8 +2,6 @@ import json
 from urllib2 import urlopen
 import argparse
 
-max_bytes = 10
-
 city_dict = dict()
 
 parser = argparse.ArgumentParser(description='Geolocate IP addresses from a file')
@@ -11,7 +9,6 @@ parser = argparse.ArgumentParser(description='Geolocate IP addresses from a file
 input_file = "IP_FINAL_2"
 output_file = "ip_count.csv"
 
-parser.add_argument("-l", "--limit", help="approximate maximum number of bytes to read from the input file",type=int)
 parser.add_argument("-i", "--input", help="the file to use for input, should contain one IP address per line, defaults to " + input_file)
 parser.add_argument("-o", "--output", help="the file to use for output, will be overwritten if it exists and created if it doesn't, defaults to " + output_file)
 parser.add_argument("-v", "--verbosity", help="increase verbosity for each flag instance", action="count", default=0)
@@ -32,14 +29,7 @@ with open(output_file,"w") as ip_output:
 
 try:
     with open(input_file, "r") as ip_file:
-      ips = ""
-
-      if args.limit:
-        ips = ip_file.readlines(args.limit)     
-      else:
-        ips = ip_file.readlines(max_bytes)
-
-      for ip in ips:
+      for ip in ip_file:
         ip = ip.split(' ')[0]
 
         if args.verbosity >=3:
