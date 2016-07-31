@@ -28,7 +28,7 @@ with open(output_file,"w") as ip_output:
     pass
 
 try:
-    with open(input_file, "r") as ip_file:
+    with open(input_file) as ip_file:
       for ip in ip_file:
         ip = ip.split(' ')[0]
 
@@ -39,7 +39,7 @@ try:
         state_init = str(json_data["region_code"])
         state_name = str(json_data["region_name"])
         country_name = str(json_data["country_name"])
-        city_name = str(json_data["city"])
+        city_name = unicode(json_data["city"])
         lat = str(json_data["latitude"])
         lon = str(json_data["longitude"])
 
@@ -99,11 +99,11 @@ try:
                 print "Writing count (" + str(city_dict[city]["count"]) +  ") for " + city + ", " + city_dict[city]["state_name"]
             output_string = ""
             for item in city_dict[city]:
-                output_string = output_string + str(city_dict[city][item]) + ","
+                output_string = output_string + unicode(city_dict[city][item]) + ","
 
             output_string = output_string[:-1] + "\n"
 
-            ip_output.writelines(output_string)
+            ip_output.writelines(output_string.encode("UTF-8"))
 
     if args.verbosity >= 1:
         print "Processing complete, output stored in " + output_file
