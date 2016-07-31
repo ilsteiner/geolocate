@@ -103,7 +103,7 @@ with open(output_file,"a") as ip_output:
   
     for city in city_dict:
         if args.verbosity >= 3:
-            print "Writing count for " + city + ", " + city_dict[city]["state_name"]
+            print "Writing count (" + str(city_dict[city]["count"]) +  ") for " + city + ", " + city_dict[city]["state_name"]
         output_string = ""
         for item in city_dict[city]:
             output_string = output_string + str(city_dict[city][item]) + ","
@@ -111,6 +111,7 @@ with open(output_file,"a") as ip_output:
         output_string = output_string[:-1] + "\n"
 
         ip_output.writelines(output_string)
-        if args.verbosity >= 1:
-            print "Processing complete, output stored in " + output_file
+
+if args.verbosity >= 1:
+    print "Processing complete, output stored in " + output_file
   
