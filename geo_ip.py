@@ -2,7 +2,7 @@ import json
 from urllib2 import urlopen
 import argparse
 
-city_dict = dict()
+state_dict = dict()
 
 parser = argparse.ArgumentParser(description='Geolocate IP addresses from a file')
 
@@ -74,12 +74,12 @@ try:
                 if args.verbosity >= 1:
                     print "No city found for " + str(ip) + " at " + lat + ", " + lon + ", giving up"
 
-        if city_name in city_dict:
+        if state_init in state_dict:
           if args.verbosity >= 3:
             print "Incrementing count for " + city_name
-          current_count = city_dict[city_name]["count"]
+          current_count = state_dict[state_init]["count"]
         
-        city_dict[city_name] = {"city_name": city_name, "state_name": state_name,"state_code": state_init,"country_name": country_name,"count": current_count + 1}
+        state_dict[state_init] = {"city_name": city_name, "state_name": state_name,"state_code": state_init,"country_name": country_name,"count": current_count + 1}
 
     with open(output_file,"a") as ip_output:
         if args.verbosity >= 1:
@@ -87,19 +87,19 @@ try:
 
         output_title = ""
 
-        for item in city_dict.items()[0][1].keys():
+        for item in state_dict.items()[0][1].keys():
             output_title = output_title + item + ","
 
         output_title = output_title[:-1] + "\n"
 
         ip_output.writelines(output_title)
       
-        for city in city_dict:
-            if args.verbosity >= 3:
-                print "Writing count (" + str(city_dict[city]["count"]) +  ") for " + city + ", " + city_dict[city]["state_name"]
+        for state in state_dict:
+            # if args.verbosity >= 3:
+                # print "Writing count (" + str(city_dict[city]["count"]) +  ") for " + city + ", " + city_dict[city]["state_name"]
             output_string = ""
-            for item in city_dict[city]:
-                output_string = output_string + unicode(city_dict[city][item]) + ","
+            for item in state_dict[state]:
+                output_string = output_string + unicode(state_dict[state][item]) + ","
 
             output_string = output_string[:-1] + "\n"
 
